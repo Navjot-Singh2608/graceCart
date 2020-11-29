@@ -1,9 +1,24 @@
+import bcrypt from "bcryptjs";
 const data = {
-  products: [
+  users: [
     {
-      _id: "1",
+      name: "graceCartAdmin",
+      email: "gracecartadmin@gmail.com",
+      password: bcrypt.hashSync("graceCart2608@", 8),
+      isAdmin: true
+    },
+    {
+      name: "gracecartuser",
+      email: "gracecartuser@gmail.com",
+      password: bcrypt.hashSync("12345678", 8),
+      isAdmin: false
+    }
+  ],
+  Menu: [
+    {
       name: "Nike Slim Shirt",
       image: "/images/product-1.png",
+      category: "shirts",
       price: 120,
       countInStock: 10,
       brand: "Nike",
@@ -12,9 +27,9 @@ const data = {
       description: "high quality product"
     },
     {
-      _id: "2",
       name: "Adidas Slim Shirt",
-      image: "/images/product-1.png",
+      image: "/images/pic2.jpg",
+      category: "shirts",
       price: 100,
       countInStock: 10,
       brand: "Adidas",
@@ -23,9 +38,9 @@ const data = {
       description: "high quality product"
     },
     {
-      _id: "3",
       name: "Lacoste Slim Shirt",
-      image: "/images/product-1.png",
+      image: "/images/pic3.jpg",
+      category: "shirts",
       price: 220,
       countInStock: 10,
       brand: "Nike",
@@ -34,9 +49,9 @@ const data = {
       description: "high quality product"
     },
     {
-      _id: "4",
       name: "Puma Slim Pants",
-      image: "/images/product-1.png",
+      image: "/images/pic4.jpg",
+      category: "pants",
       price: 140,
       countInStock: 10,
       brand: "Nike",
@@ -45,9 +60,9 @@ const data = {
       description: "high quality product"
     },
     {
-      _id: "5",
       name: "Adidas Slim Pant",
-      image: "/images/product-1.png",
+      image: "/images/pic5.jpg",
+      category: "pants",
       price: 130,
       countInStock: 10,
       brand: "Adidas",
